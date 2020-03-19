@@ -119,13 +119,11 @@ rule combinegsea:
 rule gsea_nc:
   input:
     ['output_data/window_data_gsea_in_{n_top_regulated}.csv','output_data/neural_crest.gmt']
-#    ['output_data/neural_crest.gmt','output_data/window_data_gsea_in_{n_top_regulated}.csv']
   output:
     'output_data/gsea_neural_crest_window_out_{n_top_regulated}.csv'
   shell:
-#    'Rscript new_gsea_fc_model.R {output} 1 1 1 {input[0]} {MINSETSIZE_NC} {NO_PERMUTATIONS} {input[1]} 1'
     'Rscript gsea_fc_multiple.R {input[0]} {input[1]} {MINSETSIZE_NC} {NO_PERMUTATIONS} 1 {output}'
-#    'Rscript gsea_fc_point.R {input[0]} {input[1]} {wildcards.minsetsize} {NO_PERMUTATIONS} {NO_CORES_GSEA} {output}'
+
 
 rule panel1:
   input:
