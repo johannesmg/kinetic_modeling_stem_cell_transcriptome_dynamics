@@ -1,0 +1,20 @@
+cel_dir: "/path/to/cel/files"
+
+eset_file: "output_data/expression_set.csv"
+symbol_conversion_file: "input_data/symbol_to_ensg_conversion_human.RData"
+parameter_file: "input_data/optimal_parameters.csv"
+full_msigdb: "input_data/c2.all.v6.0.entrez.gmt"
+kegg_msigdb: "input_data/c2.cp.kegg.v6.0.entrez.gmt"
+raw_data_pcr: "input_data/validation_rohdaten_n_3.xlsx"
+annotation_file: "input_data/cel_file_annotation.csv"
+
+data_time_row: [24,48,72,96,144]
+data_conc_row: [0.025,0.15,0.35,0.45,0.55,0.65,0.8,1]
+n_top_regulated: 1500
+
+sig_thresh_gsea_kegg: [0.01,0.05]
+minsetsize_nc: 20
+minsetsize_kegg: [15,20]
+minsetsize_msigdb: 20
+nopermutations: 10000
+nocoresgsea: 4

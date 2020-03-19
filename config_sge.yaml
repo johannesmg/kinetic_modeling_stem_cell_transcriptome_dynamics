@@ -1,0 +1,40 @@
+__default__:
+    h_vmem: '6g'
+    h_rt: '03:59:00'
+    pe: 'smp 1'
+
+create_expression_set:
+    h_vmem: '24g'
+    h_rt: '03:59:00'
+    pe: 'smp 1'
+
+fit_input_data:
+    h_vmem: '8g'
+    h_rt: '03:59:00'
+    pe: 'smp 1'
+
+gsea_msigdb:
+    h_vmem: '8g'
+    h_rt: '03:59:00'
+    pe: 'smp 4'
+
+gsea_kegg:
+    h_vmem: '6g'
+    h_rt: '03:59:00'
+    pe: 'smp 4'
+
+panel4:
+    h_vmem: '10g'
+    h_rt: '03:59:00'
+    pe: 'smp 1'
+
+panel1:
+    h_vmem: '10g'
+    h_rt: '03:59:00'
+    pe: 'smp 1'
+
+mica_dataset:
+    h_vmem: '10g'
+    h_rt: '03:59:00'
+    pe: 'smp 1'
+

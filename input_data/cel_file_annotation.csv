@@ -1,0 +1,141 @@
+No in list,File (new name),Name of Differentiation,time of differentiation [h],replicate,differentiation protocol,cell line,compound,study,treatment_start [h],treatment_end [h],compound_concentration [M]
+1,UKN1timecourse_d-3_Exp1_(HG-U133_Plus_2),D14_02MK,-72,A,UKN1,H9-hESC,untreated,timecourse,,,
+2,UKN1timecourse_0h_Exp1_(HG-U133_Plus_2),D14_02MK,0,A,UKN1,H9-hESC,untreated,timecourse,,,
+3,UKN1timecourse_3h_Exp1_(HG-U133_Plus_2),D14_02MK,3,A,UKN1,H9-hESC,untreated,timecourse,,,
+4,UKN1timecourse_6h_Exp1_(HG-U133_Plus_2),D14_02MK,6,A,UKN1,H9-hESC,untreated,timecourse,,,
+5,UKN1timecourse_10h_Exp1_(HG-U133_Plus_2),D14_02MK,10,A,UKN1,H9-hESC,untreated,timecourse,,,
+6,UKN1timecourse_16h_Exp1_(HG-U133_Plus_2),D14_02MK,16,A,UKN1,H9-hESC,untreated,timecourse,,,
+7,UKN1timecourse_24h_Exp1_(HG-U133_Plus_2),D14_02MK,24,A,UKN1,H9-hESC,untreated,timecourse,,,
+8,UKN1timecourse_36h_Exp1_(HG-U133_Plus_2),D14_02MK,36,A,UKN1,H9-hESC,untreated,timecourse,,,
+9,UKN1timecourse_48h_Exp1_(HG-U133_Plus_2),D14_02MK,48,A,UKN1,H9-hESC,untreated,timecourse,,,
+10,UKN1timecourse_60h_Exp1_(HG-U133_Plus_2),D14_02MK,60,A,UKN1,H9-hESC,untreated,timecourse,,,
+11,UKN1timecourse_72h_Exp1_(HG-U133_Plus_2),D14_02MK,72,A,UKN1,H9-hESC,untreated,timecourse,,,
+12,UKN1timecourse_96h_Exp1_(HG-U133_Plus_2),D14_02MK,96,A,UKN1,H9-hESC,untreated,timecourse,,,
+13,UKN1timecourse_120h_Exp1_(HG-U133_Plus_2),D14_02MK,120,A,UKN1,H9-hESC,untreated,timecourse,,,
+14,UKN1timecourse_144h_Exp1_(HG-U133_Plus_2),D14_02MK,144,A,UKN1,H9-hESC,untreated,timecourse,,,
+15,UKN1timecourse_d-3_Exp2_(HG-U133_Plus_2),D14_03MK,-72,B,UKN1,H9-hESC,untreated,timecourse,,,
+16,UKN1timecourse_0h_Exp2_(HG-U133_Plus_2),D14_03MK,0,B,UKN1,H9-hESC,untreated,timecourse,,,
+17,UKN1timecourse_3h_Exp2_(HG-U133_Plus_2),D14_03MK,3,B,UKN1,H9-hESC,untreated,timecourse,,,
+18,UKN1timecourse_6h_Exp2_(HG-U133_Plus_2),D14_03MK,6,B,UKN1,H9-hESC,untreated,timecourse,,,
+19,UKN1timecourse_10h_Exp2_(HG-U133_Plus_2),D14_03MK,10,B,UKN1,H9-hESC,untreated,timecourse,,,
+20,UKN1timecourse_16h_Exp2_(HG-U133_Plus_2),D14_03MK,16,B,UKN1,H9-hESC,untreated,timecourse,,,
+21,UKN1timecourse_24h_Exp2_(HG-U133_Plus_2),D14_03MK,24,B,UKN1,H9-hESC,untreated,timecourse,,,
+22,UKN1timecourse_36h_Exp2_(HG-U133_Plus_2),D14_03MK,36,B,UKN1,H9-hESC,untreated,timecourse,,,
+23,UKN1timecourse_48h_Exp2_(HG-U133_Plus_2),D14_03MK,48,B,UKN1,H9-hESC,untreated,timecourse,,,
+24,UKN1timecourse_60h_Exp2_(HG-U133_Plus_2),D14_03MK,60,B,UKN1,H9-hESC,untreated,timecourse,,,
+25,UKN1timecourse_72h_Exp2_(HG-U133_Plus_2),D14_03MK,72,B,UKN1,H9-hESC,untreated,timecourse,,,
+26,UKN1timecourse_96h_Exp2_(HG-U133_Plus_2),D14_03MK,96,B,UKN1,H9-hESC,untreated,timecourse,,,
+27,UKN1timecourse_120h_Exp2_(HG-U133_Plus_2),D14_03MK,120,B,UKN1,H9-hESC,untreated,timecourse,,,
+28,UKN1timecourse_144h_Exp2_(HG-U133_Plus_2),D14_03MK,144,B,UKN1,H9-hESC,untreated,timecourse,,,
+29,UKN1timecourse_d-3_Exp3_(HG-U133_Plus_2),D14_07ND,-72,C,UKN1,H9-hESC,untreated,timecourse,,,
+30,UKN1timecourse_0h_Exp3_(HG-U133_Plus_2),D14_07ND,0,C,UKN1,H9-hESC,untreated,timecourse,,,
+31,UKN1timecourse_3h_Exp3_(HG-U133_Plus_2),D14_07ND,3,C,UKN1,H9-hESC,untreated,timecourse,,,
+32,UKN1timecourse_6h_Exp3_(HG-U133_Plus_2),D14_07ND,6,C,UKN1,H9-hESC,untreated,timecourse,,,
+33,UKN1timecourse_10h_Exp3_(HG-U133_Plus_2),D14_07ND,10,C,UKN1,H9-hESC,untreated,timecourse,,,
+34,UKN1timecourse_16h_Exp3_(HG-U133_Plus_2),D14_07ND,16,C,UKN1,H9-hESC,untreated,timecourse,,,
+35,UKN1timecourse_24h_Exp3_(HG-U133_Plus_2),D14_07ND,24,C,UKN1,H9-hESC,untreated,timecourse,,,
+36,UKN1timecourse_36h_Exp3_(HG-U133_Plus_2),D14_07ND,36,C,UKN1,H9-hESC,untreated,timecourse,,,
+37,UKN1timecourse_48h_Exp3_(HG-U133_Plus_2),D14_07ND,48,C,UKN1,H9-hESC,untreated,timecourse,,,
+38,UKN1timecourse_60h_Exp3_(HG-U133_Plus_2),D14_07ND,60,C,UKN1,H9-hESC,untreated,timecourse,,,
+39,UKN1timecourse_72h_Exp3_(HG-U133_Plus_2),D14_07ND,72,C,UKN1,H9-hESC,untreated,timecourse,,,
+40,UKN1timecourse_96h_Exp3_(HG-U133_Plus_2),D14_07ND,96,C,UKN1,H9-hESC,untreated,timecourse,,,
+41,UKN1timecourse_120h_Exp3_(HG-U133_Plus_2),D14_07ND,120,C,UKN1,H9-hESC,untreated,timecourse,,,
+42,UKN1timecourse_144h_Exp3_(HG-U133_Plus_2),D14_07ND,144,C,UKN1,H9-hESC,untreated,timecourse,,,
+43,UKN1timecourse_d-3_Exp4_(HG-U133_Plus_2),D14_06ND,-72,D,UKN1,H9-hESC,untreated,timecourse,,,
+44,UKN1timecourse_0h_Exp4_(HG-U133_Plus_2),D14_06ND,0,D,UKN1,H9-hESC,untreated,timecourse,,,
+45,UKN1timecourse_3h_Exp4_(HG-U133_Plus_2),D14_06ND,3,D,UKN1,H9-hESC,untreated,timecourse,,,
+46,UKN1timecourse_6h_Exp4_(HG-U133_Plus_2),D14_06ND,6,D,UKN1,H9-hESC,untreated,timecourse,,,
+47,UKN1timecourse_10h_Exp4_(HG-U133_Plus_2),D14_06ND,10,D,UKN1,H9-hESC,untreated,timecourse,,,
+48,UKN1timecourse_16h_Exp4_(HG-U133_Plus_2),D14_06ND,16,D,UKN1,H9-hESC,untreated,timecourse,,,
+49,UKN1timecourse_24h_Exp4_(HG-U133_Plus_2),D14_06ND,24,D,UKN1,H9-hESC,untreated,timecourse,,,
+50,UKN1timecourse_36h_Exp4_(HG-U133_Plus_2),D14_06ND,36,D,UKN1,H9-hESC,untreated,timecourse,,,
+51,UKN1timecourse_48h_Exp4_(HG-U133_Plus_2),D14_06ND,48,D,UKN1,H9-hESC,untreated,timecourse,,,
+52,UKN1timecourse_60h_Exp4_(HG-U133_Plus_2),D14_06ND,60,D,UKN1,H9-hESC,untreated,timecourse,,,
+53,UKN1timecourse_72h_Exp4_(HG-U133_Plus_2),D14_06ND,72,D,UKN1,H9-hESC,untreated,timecourse,,,
+54,UKN1timecourse_96h_Exp4_(HG-U133_Plus_2),D14_06ND,96,D,UKN1,H9-hESC,untreated,timecourse,,,
+55,UKN1timecourse_120h_Exp4_(HG-U133_Plus_2),D14_06ND,120,D,UKN1,H9-hESC,untreated,timecourse,,,
+56,UKN1timecourse_144h_Exp4_(HG-U133_Plus_2),D14_06ND,144,D,UKN1,H9-hESC,untreated,timecourse,,,
+57,UKN1_sat_a_VPA_5mM_D12_31NS_195.CEL,D12_31NS,144,A,UKN1,H9-hESC,VPA,VPA sat acute,96,144,5.00E-003
+58,UKN1_sat_a_VPA_4mM_D12_31NS_196.CEL,D12_31NS,144,B,UKN1,H9-hESC,VPA,VPA sat acute,96,144,4.00E-003
+59,UKN1_sat_a_VPA_2mM_D12_31NS_197.CEL,D12_31NS,144,C,UKN1,H9-hESC,VPA,VPA sat acute,96,144,2.00E-003
+60,UKN1_sat_a_VPA_1mM_D12_31NS_198.CEL,D12_31NS,144,D,UKN1,H9-hESC,VPA,VPA sat acute,96,144,1.00E-003
+61,"UKN1_sat_a_VPA_0,6mM_D12_31NS_199.CEL",D12_31NS,144,E,UKN1,H9-hESC,VPA,VPA sat acute,96,144,6.00E-004
+62,UKN1_sat_a_untr_D12_31NS_200.CEL,D12_31NS,144,A,UKN1,H9-hESC,untreated,VPA sat acute,,,
+63,UKN1_sat_a_VPA_5mM_D12_32NS_201.CEL,D12_32NS,144,A,UKN1,H9-hESC,VPA,VPA sat acute,96,144,5.00E-003
+64,UKN1_sat_a_VPA_4mM_D12_32NS_202.CEL,D12_32NS,144,B,UKN1,H9-hESC,VPA,VPA sat acute,96,144,4.00E-003
+65,UKN1_sat_a_VPA_2mM_D12_32NS_203.CEL,D12_32NS,144,C,UKN1,H9-hESC,VPA,VPA sat acute,96,144,2.00E-003
+66,UKN1_sat_a_VPA_1mM_D12_32NS_204.CEL,D12_32NS,144,D,UKN1,H9-hESC,VPA,VPA sat acute,96,144,1.00E-003
+67,"UKN1_sat_a_VPA_0,6mM_D12_32NS_205.CEL",D12_32NS,144,E,UKN1,H9-hESC,VPA,VPA sat acute,96,144,6.00E-004
+68,UKN1_sat_a_untr_D12_32NS_206.CEL,D12_32NS,144,B,UKN1,H9-hESC,untreated,VPA sat acute,,,
+69,UKN1_sat_a_VPA_5mM_D12_TW_207.CEL,D12_TW,144,A,UKN1,H9-hESC,VPA,VPA sat acute,96,144,5.00E-003
+70,UKN1_sat_a_VPA_4mM_D12_TW_208.CEL,D12_TW,144,B,UKN1,H9-hESC,VPA,VPA sat acute,96,144,4.00E-003
+71,UKN1_sat_a_VPA_2mM_D12_TW_209.CEL,D12_TW,144,C,UKN1,H9-hESC,VPA,VPA sat acute,96,144,2.00E-003
+72,UKN1_sat_a_VPA_1mM_D12_TW_210.CEL,D12_TW,144,D,UKN1,H9-hESC,VPA,VPA sat acute,96,144,1.00E-003
+73,"UKN1_sat_a_VPA_0,6mM_D12_TW_211.CEL",D12_TW,144,E,UKN1,H9-hESC,VPA,VPA sat acute,96,144,6.00E-004
+74,UKN1_sat_a_untr_D12_TW_212.CEL,D12_TW,144,C,UKN1,H9-hESC,untreated,VPA sat acute,,,
+75,UKN1_sat_c_VPA_1000µM_D12_25NS_141.CEL,D12_25NS,144,A,UKN1,H9-hESC,VPA,VPA sat conc,0,144,1.00E-003
+76,UKN1_sat_c_VPA_1000µM_D12_26NS_142.CEL,D12_26NS,144,B,UKN1,H9-hESC,VPA,VPA sat conc,0,144,1.00E-003
+77,UKN1_sat_c_VPA_1000µM_D12_27NS_143.CEL,D12_27NS,144,C,UKN1,H9-hESC,VPA,VPA sat conc,0,144,1.00E-003
+78,UKN1_sat_c_VPA_800µM_D12_25NS_144.CEL,D12_25NS,144,A,UKN1,H9-hESC,VPA,VPA sat conc,0,144,8.00E-004
+79,UKN1_sat_c_VPA_800µM_D12_26NS_145.CEL,D12_26NS,144,B,UKN1,H9-hESC,VPA,VPA sat conc,0,144,8.00E-004
+80,UKN1_sat_c_VPA_800µM_D12_27NS_146.CEL,D12_27NS,144,C,UKN1,H9-hESC,VPA,VPA sat conc,0,144,8.00E-004
+81,UKN1_sat_c_VPA_650µM_D12_25NS_147.CEL,D12_25NS,144,A,UKN1,H9-hESC,VPA,VPA sat conc,0,144,6.50E-004
+82,UKN1_sat_c_VPA_650µM_D12_26NS_148.CEL,D12_26NS,144,B,UKN1,H9-hESC,VPA,VPA sat conc,0,144,6.50E-004
+83,UKN1_sat_c_VPA_650µM_D12_27NS_149.CEL,D12_27NS,144,C,UKN1,H9-hESC,VPA,VPA sat conc,0,144,6.50E-004
+84,UKN1_sat_c_VPA_550µM_D12_25NS_150.CEL,D12_25NS,144,A,UKN1,H9-hESC,VPA,VPA sat conc,0,144,5.50E-004
+85,UKN1_sat_c_VPA_550µM_D12_26NS_151.CEL,D12_26NS,144,B,UKN1,H9-hESC,VPA,VPA sat conc,0,144,5.50E-004
+86,UKN1_sat_c_VPA_550µM_D12_27NS_152.CEL,D12_27NS,144,C,UKN1,H9-hESC,VPA,VPA sat conc,0,144,5.50E-004
+87,UKN1_sat_c_VPA_450µM_D12_25NS_153.CEL,D12_25NS,144,A,UKN1,H9-hESC,VPA,VPA sat conc,0,144,4.50E-004
+88,UKN1_sat_c_VPA_450µM_D12_26NS_154.CEL,D12_26NS,144,B,UKN1,H9-hESC,VPA,VPA sat conc,0,144,4.50E-004
+89,UKN1_sat_c_VPA_450µM_D12_27NS_155.CEL,D12_27NS,144,C,UKN1,H9-hESC,VPA,VPA sat conc,0,144,4.50E-004
+90,UKN1_sat_c_VPA_350µM_D12_25NS_156.CEL,D12_25NS,144,A,UKN1,H9-hESC,VPA,VPA sat conc,0,144,3.50E-004
+91,UKN1_sat_c_VPA_350µM_D12_26NS_157.CEL,D12_26NS,144,B,UKN1,H9-hESC,VPA,VPA sat conc,0,144,3.50E-004
+92,UKN1_sat_c_VPA_350µM_D12_27NS_158.CEL,D12_27NS,144,C,UKN1,H9-hESC,VPA,VPA sat conc,0,144,3.50E-004
+93,UKN1_sat_c_VPA_150µM_D12_25NS_159.CEL,D12_25NS,144,A,UKN1,H9-hESC,VPA,VPA sat conc,0,144,1.50E-004
+94,UKN1_sat_c_VPA_150µM_D12_26NS_160.CEL,D12_26NS,144,B,UKN1,H9-hESC,VPA,VPA sat conc,0,144,1.50E-004
+95,UKN1_sat_c_VPA_150µM_D12_27NS_161.CEL,D12_27NS,144,C,UKN1,H9-hESC,VPA,VPA sat conc,0,144,1.50E-004
+96,UKN1_sat_c_VPA_25µM_D12_25NS_162.CEL,D12_25NS,144,A,UKN1,H9-hESC,VPA,VPA sat conc,0,144,2.50E-005
+97,UKN1_sat_c_VPA_25µM_D12_26NS_163.CEL,D12_26NS,144,B,UKN1,H9-hESC,VPA,VPA sat conc,0,144,2.50E-005
+98,UKN1_sat_c_VPA_25µM_D12_27NS_164.CEL,D12_27NS,144,C,UKN1,H9-hESC,VPA,VPA sat conc,0,144,2.50E-005
+99,UKN1_sat_c_untr_D12_25NS_165.CEL,D12_25NS,144,A,UKN1,H9-hESC,untreated,VPA sat conc,,,
+100,UKN1_sat_c_untr_D12_26NS_166.CEL,D12_26NS,144,B,UKN1,H9-hESC,untreated,VPA sat conc,,,
+101,UKN1_sat_c_untr_D12_27NS_167.CEL,D12_27NS,144,C,UKN1,H9-hESC,untreated,VPA sat conc,,,
+102,UKN1_sat_c_untr_D12_25NS_168.CEL,D12_25NS,144,D,UKN1,H9-hESC,untreated,VPA sat conc,,,
+103,UKN1_sat_c_untr_D12_26NS_169.CEL,D12_26NS,144,E,UKN1,H9-hESC,untreated,VPA sat conc,,,
+104,UKN1_sat_c_untr_D12_27NS_170.CEL,D12_27NS,144,F,UKN1,H9-hESC,untreated,VPA sat conc,,,
+105,Dreser_1.1_(HG-U133_Plus_2),D14_17 MK,144,E,UKN1,H9-hESC,untreated,timecourse,,,
+106,Dreser_1.2_(HG-U133_Plus_2),D14_17 MK,72,E,UKN1,H9-hESC,untreated,timecourse,,,
+107,Dreser_1.3_(HG-U133_Plus_2),D14_17 MK,0,E,UKN1,H9-hESC,untreated,timecourse,,,
+108,Dreser_1.6_(HG-U133_Plus_2),D14_17 MK,72,E,UKN1,H9-hESC,VPA,timecourse,0,72,6.00E-004
+109,Dreser_1.9_(HG-U133_Plus_2),D14_17 MK,144,E,UKN1,H9-hESC,VPA,timecourse,0,144,6.00E-004
+110,Dreser_1.10_(HG-U133_Plus_2),D14_17 MK,144,E,UKN1,H9-hESC,VPA,timecourse,24,96,6.00E-004
+111,Dreser_1.11_(HG-U133_Plus_2),D14_17 MK,144,E,UKN1,H9-hESC,VPA,timecourse,72,144,6.00E-004
+112,Dreser_2.1_(HG-U133_Plus_2),D14_18 MK,144,F,UKN1,H9-hESC,untreated,timecourse,,,
+113,Dreser_2.2_(HG-U133_Plus_2),D14_18 MK,72,F,UKN1,H9-hESC,untreated,timecourse,,,
+114,Dreser_2.3_(HG-U133_Plus_2),D14_18 MK,0,F,UKN1,H9-hESC,untreated,timecourse,,,
+115,Dreser_2.4_(HG-U133_Plus_2),D14_18 MK,24,F,UKN1,H9-hESC,VPA,timecourse,0,24,6.00E-004
+116,Dreser_2.5_(HG-U133_Plus_2),D14_18 MK,48,F,UKN1,H9-hESC,VPA,timecourse,0,48,6.00E-004
+117,Dreser_2.6_(HG-U133_Plus_2),D14_18 MK,72,F,UKN1,H9-hESC,VPA,timecourse,0,72,6.00E-004
+118,Dreser_2.7_(HG-U133_Plus_2),D14_18 MK,96,F,UKN1,H9-hESC,VPA,timecourse,0,96,6.00E-004
+119,Dreser_2.9_(HG-U133_Plus_2),D14_18 MK,144,F,UKN1,H9-hESC,VPA,timecourse,0,144,6.00E-004
+120,Dreser_2.10_(HG-U133_Plus_2),D14_18 MK,144,F,UKN1,H9-hESC,VPA,timecourse,24,96,6.00E-004
+121,Dreser_2.11_(HG-U133_Plus_2),D14_18 MK,144,F,UKN1,H9-hESC,VPA,timecourse,24,72,6.00E-004
+122,Dreser_2.12_(HG-U133_Plus_2),D14_18 MK,144,F,UKN1,H9-hESC,VPA,timecourse,72,144,6.00E-004
+123,Dreser_3.1_(HG-U133_Plus_2),D14_19 MK,144,G,UKN1,H9-hESC,untreated,timecourse,,,
+124,Dreser_3.2_(HG-U133_Plus_2),D14_19 MK,72,G,UKN1,H9-hESC,untreated,timecourse,,,
+125,Dreser_3.3_(HG-U133_Plus_2),D14_19 MK,0,G,UKN1,H9-hESC,untreated,timecourse,,,
+126,Dreser_3.4_(HG-U133_Plus_2),D14_19 MK,24,G,UKN1,H9-hESC,VPA,timecourse,0,24,6.00E-004
+127,Dreser_3.5_(HG-U133_Plus_2),D14_19 MK,48,G,UKN1,H9-hESC,VPA,timecourse,0,48,6.00E-004
+128,Dreser_3.6_(HG-U133_Plus_2),D14_19 MK,72,G,UKN1,H9-hESC,VPA,timecourse,0,72,6.00E-004
+129,Dreser_3.7_(HG-U133_Plus_2),D14_19 MK,96,G,UKN1,H9-hESC,VPA,timecourse,0,96,6.00E-004
+130,Dreser_3.9_(HG-U133_Plus_2),D14_19 MK,144,G,UKN1,H9-hESC,VPA,timecourse,0,144,6.00E-004
+131,Dreser_3.10_(HG-U133_Plus_2),D14_19 MK,144,G,UKN1,H9-hESC,VPA,timecourse,24,96,6.00E-004
+132,Dreser_3.11_(HG-U133_Plus_2),D14_19 MK,144,G,UKN1,H9-hESC,VPA,timecourse,24,72,6.00E-004
+133,Dreser_3.12_(HG-U133_Plus_2),D14_19 MK,144,G,UKN1,H9-hESC,VPA,timecourse,72,144,6.00E-004
+134,Dreser_4.1_(HG-U133_Plus_2),D14_23 ND,144,H,UKN1,H9-hESC,untreated,timecourse,,,
+135,Dreser_4.2_(HG-U133_Plus_2),D14_23 ND,72,H,UKN1,H9-hESC,untreated,timecourse,,,
+136,Dreser_4.3_(HG-U133_Plus_2),D14_23 ND,0,H,UKN1,H9-hESC,untreated,timecourse,,,
+137,Dreser_4.6_(HG-U133_Plus_2),D14_23 ND,72,H,UKN1,H9-hESC,VPA,timecourse,0,72,6.00E-004
+138,Dreser_4.9_(HG-U133_Plus_2),D14_23 ND,144,H,UKN1,H9-hESC,VPA,timecourse,0,144,6.00E-004
+139,Dreser_4.10_(HG-U133_Plus_2),D14_23 ND,144,H,UKN1,H9-hESC,VPA,timecourse,24,96,6.00E-004
+140,Dreser_4.11_(HG-U133_Plus_2),D14_23 ND,144,H,UKN1,H9-hESC,VPA,timecourse,24,72,6.00E-004
