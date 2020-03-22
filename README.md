@@ -2,7 +2,7 @@
 
 These scripts generate figures 1-4 for the article "Kinetic modeling of stem cell transcriptome dynamics to identify regulatory modules of normal and disturbed neuroectodermal differentiation". Here, the GPL (>=2) applies.
  
-The Snakefile describes the workflow and can be executed using snakemake, downloadable from https://github.com/snakemake/snakemake. Before executing snakemake, local path information has to be entered into the file config.yml.
+The Snakefile describes the workflow and can be executed using snakemake, downloadable from https://github.com/snakemake/snakemake.
 
 In order to create the figure pdfs, the following additional files are required:
 
