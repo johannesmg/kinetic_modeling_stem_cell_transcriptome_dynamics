@@ -9,6 +9,6 @@ In order to create the figure pdfs, the following additional files are required:
 1. Two GMT gene set definition files from the MsigDB (./input_data/c2.all.v6.0.entrez.gmt,./input_data/c2.cp.kegg.v6.0.entrez.gmt)
 Both files can be downloaded from https://www.gsea-msigdb.org/gsea/msigdb/download_file.jsp?filePath=/msigdb/release/6.0/msigdb_v6.0_files_to_download_locally.zip
 
-2. Raw microarray CEL files that were uploaded to GEO, GSExxxx.
+2. Raw microarray CEL files that were uploaded to GEO under the accession number GSE147270.
 
 The file gsea_functions.R contains modified code from the R package HTSAnalyzeR (https://bioconductor.org/packages/release/bioc/html/HTSanalyzeR.html), licensed under the Artistic-2.0.
