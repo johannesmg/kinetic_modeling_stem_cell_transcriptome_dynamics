@@ -1,4 +1,4 @@
-cel_dir: "/path/to/cel/files"
+cel_dir: "~/Downloads/GSE147270_RAW"
 
 eset_file: "output_data/expression_set.csv"
 symbol_conversion_file: "input_data/symbol_to_ensg_conversion_human.RData"
