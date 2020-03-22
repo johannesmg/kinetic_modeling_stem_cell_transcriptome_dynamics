@@ -35,11 +35,11 @@ rule all:
 
 rule create_expression_set:
   input:
-    [CEL_DIR,CEL_ANNOTATION_FILE]
+    [CEL_ANNOTATION_FILE]
   output:
     [ESET_FILE]
   shell:
-    'Rscript process_cel_files.R {input[0]} {input[1]} {ESET_FILE}'
+    'Rscript process_cel_files.R {CEL_DIR} {input} {ESET_FILE}'
 
 
 rule fit_input_data:
