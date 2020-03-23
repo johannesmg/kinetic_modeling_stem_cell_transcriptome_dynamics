@@ -31,7 +31,7 @@ TEST_CONC= [x/40 for x in range(1, 24)]
 
 rule all:
  input:
-   [expand('figures/panel_01_{n_top_regulated}.pdf',n_top_regulated=N_TOP_REGULATED),expand('figures/panel_02_{n_top_regulated}.pdf',n_top_regulated=N_TOP_REGULATED),expand('figures/panel_03_{n_top_regulated}.pdf',n_top_regulated=N_TOP_REGULATED)]
+   [expand('figures/panel_01_{n_top_regulated}.pdf',n_top_regulated=N_TOP_REGULATED),expand('figures/panel_02_{n_top_regulated}.pdf',n_top_regulated=N_TOP_REGULATED),expand('figures/panel_03_{n_top_regulated}.pdf',n_top_regulated=N_TOP_REGULATED),expand('figures/panel_04_{sig_thresh_gsea_kegg}_{minsetsize_msigdb}_{minsetsize_kegg}_{n_top_regulated}.pdf',n_top_regulated=N_TOP_REGULATED,minsetsize_kegg=MINSETSIZE_KEGG,minsetsize_msigdb=MINSETSIZE_MSIGDB,sig_thresh_gsea_kegg=SIG_THRESH_GSEA_KEGG)]
 
 rule create_expression_set:
   input:
