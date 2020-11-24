@@ -7,6 +7,7 @@ opt.file=args[4]
 n.top.regulated=as.numeric(args[5])
 out.file=args[6]
 
+
 source("common_setup.R")
 
 
@@ -298,23 +299,28 @@ ggplot(filter(model.prediction,conc %in% c(0,0.6)),aes(x=t,y=y,colour=as.factor(
 model.prediction <- predict.genes(intersect(regulated.genes,opt.par.frame$gene),t.vec=seq(0,144,1),conc.vec=round(seq(0,1,0.1),2),parameter.frame=opt.par.frame)
 
 
+
 model.prediction %>%
     group_by(gene,conc) %>%
     summarise(amplitude=max(y)-min(y),peak=t[which.max(y)]) %>%
-    mutate(peak0=peak[conc==0],peak=(peak-peak[conc==0])) %>%
     ungroup %>%
-    filter(conc==0.6) %>%
-    mutate(peak0=cut(peak0,seq(0,144,24),include.lowest=TRUE)) %>%
-    group_by(peak0,conc) %>%
-    summarise(md=median(peak),ymax=quantile(peak,0.75),ymin=quantile(peak,0.25)) %>%
-    ggplot(aes(x=peak0,group=peak0,y=md,ymax=ymax,ymin=ymin))+
-    geom_hline(yintercept=0,colour="red",alpha=0.5,size=1)+
-    geom_crossbar(width=0.75,fatten=1.5,alpha=0.5)+
+    group_by(gene) %>%
+    mutate(peak.utr=peak[conc==0]) %>%
+    ungroup %>%
+    filter(peak.utr >0 & peak.utr < 144) %>%
+    filter(gene %in% gene[conc==0]) %>%
+    filter(gene %in% gene[conc==0.6]) %>%
+    group_by(gene) %>%
+    mutate(peakm=(peak[conc==0]+peak[conc==0.6])/2,peak=(peak-peak[conc==0])) %>%
+    filter(conc %in% c(0.6)) %>%
+    ggplot(aes(x=peakm,y=peak))+
+    geom_hline(yintercept=0)+
     mytheme.model.fit.paper+
-    scale_x_discrete("Peak time untreated during day",labels=as.character(0:5))+
-    scale_y_continuous("Time shift [h]")+
-    coord_cartesian(ylim=c(-20,40))->
-    p.time.shift
+    geom_point(size=0.3,alpha=0.3)+
+    stat_smooth(geom='line', alpha=0.5,size=1,colour="red", se=FALSE,method="loess",span=0.75)+
+    scale_x_continuous("Average peak time")+
+    scale_y_continuous("Peak shift upon VPA treatment")->
+    p.ma
 
 
 model.prediction %>%
@@ -351,7 +357,7 @@ image_read("./input_data/data_matrix_rotated.svg.png") ->
 
 p.row.1 <- plot_grid(ggdraw()+draw_image(data.matrix),p.dose,p.all.cols+theme(plot.margin = unit(c(5, 5, 5,10),"pt")),nrow=1,labels=c("A","B","C"),align="v",axis="b",rel_widths=c(0.5,0.5,1))+theme(plot.margin=unit(c(5,5,8,5),"pt"))
 p.row.2 <- plot_grid(p.fit.example+theme(plot.margin = unit(c(5, 0, 5,10),"pt")),nrow=1,labels=c("D"))+theme(plot.margin=unit(c(5,5,8,5),"pt"))
-p.row.3 <- plot_grid(p.vpa.effect.def+theme(plot.margin = unit(c(5, 30, 5, 20),"pt")),p.amplitude.shift+theme(plot.margin = unit(c(5, 20, 5, 20),"pt")),p.time.shift+theme(plot.margin = unit(c(5,5, 5,20),"pt")),nrow=1,labels=c("E","F","G"),align="h",axis="b")
+p.row.3 <- plot_grid(p.vpa.effect.def+theme(plot.margin = unit(c(5, 30, 5, 20),"pt")),p.amplitude.shift+theme(plot.margin = unit(c(5, 20, 5, 20),"pt")),p.ma+theme(plot.margin = unit(c(5,5, 5,20),"pt")),nrow=1,labels=c("E","F","G"),align="h",axis="b")
 
 
 plot_grid(p.row.1,p.row.2,p.row.3,nrow=3,rel_heights=c(1.25,1,0.8))->

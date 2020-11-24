@@ -1,5 +1,3 @@
-cel_dir: "/path/to/cel/files"
-
 eset_file: "output_data/expression_set.csv"
 symbol_conversion_file: "input_data/symbol_to_ensg_conversion_human.RData"
 parameter_file: "input_data/optimal_parameters.csv"
@@ -11,6 +9,7 @@ annotation_file: "input_data/cel_file_annotation.csv"
 data_time_row: [24,48,72,96,144]
 data_conc_row: [0.025,0.15,0.35,0.45,0.55,0.65,0.8,1]
 n_top_regulated: 1500
+loess_span: 0.8
 
 sig_thresh_gsea_kegg: [0.01,0.05]
 minsetsize_nc: 20

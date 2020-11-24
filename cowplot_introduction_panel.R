@@ -3,7 +3,8 @@ data.file=args[1]
 all.gene.file=args[2]
 symbol.conversion.file=args[3]
 n.top.regulated=as.numeric(args[4])
-out.file=args[5]
+loess.span=as.numeric(args[5])
+out.file=args[6]
 
 source("common_setup.R")
 
@@ -64,7 +65,7 @@ all.data.batch.corrected %>%
     filter(gene %in% regulated.genes) %>%
     filter(conc == 0) %>%
     group_by(gene) %>%
-    do(ll=data_frame(t=seq(0,144,0.1),y=predict(loess(mny~t,data=.,span=0.8),newdata=seq(0,144,0.1)))) %$%
+    do(ll=data_frame(t=seq(0,144,0.1),y=predict(loess(mny~t,data=.,span=loess.span),newdata=seq(0,144,0.1)))) %$%
     setNames(ll,gene) ->
     interpolated.data
 
@@ -168,7 +169,6 @@ all.data.batch.corrected %>%
     
 gene.maximal.reg <- unlist(lapply(interpolated.data,function(x){x$t[which.max(x$y)]}))
 gene.maximal.reg <- gene.maximal.reg[gene.maximal.reg>0 & gene.maximal.reg< 144]
-
 
 
 enframe(gene.maximal.reg) %>%
@@ -328,8 +328,20 @@ p.whole.chain <- plot_grid(ggdraw()+draw_image(drawing.chain,scale=0.98),plot.li
 
 image_read("./input_data/Fig1a.jpg") -> drawing.protocol
 
-p.row.1 <- plot_grid(ggdraw()+draw_image(drawing.protocol),p.umap,p.heat.1+theme(legend.position="none"),p.heat.2,ncol=4,labels=c("A","B","C"),rel_widths=c(1,0.8,0.65,0.5))
+#p.row.1 <- plot_grid(ggdraw()+draw_image(drawing.protocol),p.umap,p.heat.1+theme(legend.position="none"),p.heat.2,ncol=4,labels=c("A","B","C"),rel_widths=c(1,0.8,0.65,0.5))
+
+p.row.1 <- plot_grid(ggdraw()+draw_image(drawing.protocol),p.umap,p.heat.1+theme(legend.position="none"),p.heat.2,ncol=4,labels=c("A","B","C"),rel_widths=c(1.5,0.8,0.65,0.55))
 p.row.2 <- plot_grid(p.fc,p.kinetic,p.whole.chain,align="v",axis="bt",ncol=3,labels=c("D","E","F"),rel_widths=c(0.5,0.8,1))
-plot_grid(p.row.1,p.row.2,align="hv",nrow=2,rel_heights=c(1,1)) ->
+## plot_grid(p.row.1,p.row.2,align="hv",nrow=2,rel_heights=c(1,1)) ->
+##     pp
+
+plot_grid(p.row.1,p.row.2,align="hv",nrow=2,rel_heights=c(0.9,1)) ->
     pp
+
+## p.row.1 <- plot_grid(ggdraw()+draw_image(drawing.protocol),ncol=1,nrow=1,labels=c("A"))
+## p.row.2 = plot_grid(p.umap,p.heat.1+theme(legend.position="none"),p.heat.2,ncol=4,labels=c("B","C"),rel_widths=c(0.8,0.65,0.55))
+## p.row.3 <- plot_grid(p.fc,p.kinetic,p.whole.chain,align="v",axis="bt",ncol=3,labels=c("D","E","F"),rel_widths=c(0.5,0.8,1))
+## plot_grid(p.row.1,p.row.2,p.row.3,align="hv",nrow=3,rel_heights=c(1,1)) ->
+##     pp
+
 save_plot(filename=out.file,plot=pp,base_height=5.46,base_aspect_ratio=1.8)

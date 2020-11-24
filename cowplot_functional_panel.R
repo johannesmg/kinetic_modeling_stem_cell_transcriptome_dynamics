@@ -46,14 +46,12 @@ gsea.all %>%
     filter(conc<0.65) %>%
     filter(t!=144|type=="data") %>%
     filter(conc!=0.6|type=="data") %>%
-                                        #    top_n(10,1-fdr) %>%
     filter(term%in%term[fdr==min(fdr)]) %>%
-    filter(term%in%term[score==max(score)]) %>%
     mutate(term=replace.terms(term)) %>%
     complete(t,conc,term) ->
 gsea.plot.object
 
-#print(head(gsea.plot.object))
+
 
 p.gsea.all <- ggplot(gsea.plot.object,aes(x=t,y=conc,fill=1-fdr))+
     geom_tile()+
@@ -79,6 +77,7 @@ replace.terms <- function(term){
         gsub("KEGG ","",x=.) %>%
         gsub("BETA ","BETA\n",x=.) %>%
         gsub("WNT ","WNT\n",x=.) %>%
+        gsub("LIGAND ","LIGAND\n",x=.) %>%
         gsub("MAPK ","MAPK\n",x=.) ->
         rv
     rv
@@ -86,6 +85,9 @@ replace.terms <- function(term){
 
 gsea.sigdev <- read_csv(file=gsea.developmental,col_names=F)
 colnames(gsea.sigdev) <- c("fdr","pvals","score","term","sample","min.set.size","no.reps","set.definition.file")
+
+print("Number of terms")
+print(gsea.sigdev %>% distinct(term) %>% nrow)
 
 mutate(gsea.sigdev,dir.enr=sign(score)*(1-pvals)) %>%
     separate(sample,into=c("type","t","conc"),sep="_") %>%
@@ -108,7 +110,6 @@ p.gsea.dev <- ggplot(gsea.plot.object,aes(x=t,y=conc,fill=score))+
     scale_fill_gradient2("Enrichment score",low="darkblue",high="darkred",midpoint=0,mid="white",guide="colourbar",na.value="gray80")+
     scale_x_continuous("Time [h]")+
     scale_y_continuous("VPA [mM]")+
-#    facet_wrap(~term,nrow=1)+
     facet_wrap(~term,nrow=2)+
     theme(panel.spacing = unit(1, "lines"))+
     mytheme.model.fit.paper+
@@ -325,7 +326,6 @@ ggplot(plot.data.fc.kinetic,aes(x=as.factor(0),y=factor(sgn),fill=1))+
     mytheme.model.fit.paper+
     theme(axis.text.x=element_blank(),axis.ticks.x=element_blank(),axis.title.x=element_blank())+
     theme(axis.text.y=element_blank(),axis.ticks.y=element_blank(),axis.title.y=element_blank(),axis.line.y=element_blank())+
-                                        #    ggtitle("Wnt induction") +
     scale_y_discrete("",position="right")+
     guides(fill=FALSE) +
     theme(plot.background=element_blank())+
@@ -337,20 +337,36 @@ prow <- plot_grid(p1+theme(legend.position="none"),p2,align="h",rel_widths=c(1,0
 p.wnt.heatmap <- plot_grid( prow, legend, rel_widths = c(1, .25),ncol=2)
 p.wnt.heatmap <- p1+ annotate("text", x = 4, y = divider.line.y.lower/2, label = "Wnt repressed",angle=90,hjust=0.5)+ annotate("text", x = 4, y = divider.line.y.lower+divider.line.y.upper/2+0.5, label = "Wnt induced",hjust=0.5,angle=90)
 
-## plot.data.fc.kinetic %>%
-##     group_by(sgn,t) %>%
-##     summarise(up=sum(dy>0)/n(),down=sum(dy<0)/n()) %>%
-##     gather("direction","fraction",up:down) %>%
-##     mutate(direction=factor(direction,levels=c("up","down"),ordered=T)) %>%
-##     filter(!is.na(fraction)) %>%
-##     ggplot(aes(x=interaction(sgn,t),y=fraction,fill=direction,group=interaction(sgn,direction)))+
-##     geom_bar(stat="identity")+
-##     scale_fill_brewer("Fc direction\nkinetic data",palette="Set1")+
-##     scale_y_continuous("Fraction of genes")+
-##     scale_x_discrete("Reference set/Time [h]")+
-##     scale_alpha_manual(values=c(1,0.75)) ->p1
 
-## save_plot(filename="contigency_table_wnt_activation.pdf",plot=p1,base_height=4.5,base_aspect_ratio=2)
+######################################################################################################
+########### Supplemental Figure TGFb
+###########
+######################################################################################################
+
+
+all.data.batch.corrected %>%
+    filter(gene %in% regulated.genes) %>%
+    filter(t %in% t[conc==0.6]) %>%
+    filter(conc %in% c(0,0.6)) %>%
+    group_by(gene,t) %>%
+    summarise(dy=mny[conc==0.6]-mny[conc==0]) %>%
+    group_by(gene) ->
+    fc.data.kinetic
+
+
+fc.data.kinetic %>%
+    mutate(symbol=ga[["ensg.symbol"]][as.character(gene)]) %>%
+    filter(gene %in% gene.set.tgfb[["up/induced"]])%>%
+    mutate(t=as.factor(t)) %>%
+    ggplot(aes(x=t,y=symbol,fill=dy))+
+    geom_tile()+
+    scale_fill_gradient2("Log2 fc",low="darkblue",high="darkred",na.value="white")+
+    mytheme.model.fit.paper+
+    scale_y_discrete("")+
+    scale_x_discrete("Time [h]") ->
+    p1
+
+save_plot(p1,filename="./figures/supplemental_figure_tgfb.pdf")
 
 ######################################################################################################
 ########### Figure 4 D

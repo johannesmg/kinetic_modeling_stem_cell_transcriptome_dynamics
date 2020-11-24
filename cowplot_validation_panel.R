@@ -134,6 +134,10 @@ colnames(mean.pcr.data) <- c("t","y","sdy","gene","conc")
 mean.pcr.data$symbol=mean.pcr.data$gene
 mean.pcr.data$gene=ga[["symbol.ensg"]][mean.pcr.data$gene]
 
+mean.pcr.data %>%
+    filter(!is.na(gene)) ->
+    mean.pcr.data
+
 gene.symbols <- c("PAX6","DAZL","OTX2","BMP5","SOX9","POU4F1","GAD1","NPY","OLFM3","PAX3","PIPOX","SNAI2")
 gene.symbols <- gene.symbols[ga[["symbol.ensg"]][gene.symbols] %in% opt.par.frame$gene]
 
@@ -188,33 +192,13 @@ mean.pcr.data %>%
     ungroup %>%
     summarise(mean(cr))
 
-mean.pcr.data %>%
-    filter(symbol %in% gene.symbols) %>%
-    group_by(gene) %>%
-    mutate(y=y-y[t==0 & conc==0]) %>%
-    rename(data=y) %>%
-    left_join(group_by(model.prediction,gene) %>% mutate(prediction=y-y[t==0 & conc==0]),by=c("gene","t","conc")) %>%
-    filter(t!=-72) %>%
-    group_by(gene,symbol) %>%
-    summarise(cr=cor(data,prediction)) %>%
-    filter(!is.na(cr)) %>%
-    ggplot(aes(x=cr))+
-    geom_histogram()+
-    coord_cartesian(xlim=c(0,1))
-
-
-
-mean.pcr.data %>%
-    filter(symbol %in% gene.symbols) %>%
-    group_by(gene) %>%
-    mutate(y=y-y[t==0 & conc==0]) %>%
-    rename(data=y) %>%
-    left_join(group_by(model.prediction,gene) %>% mutate(prediction=y-y[t==0 & conc==0]),by=c("gene","t","conc")) %>%
-    filter(t!=-72) %>%
-    ggplot(aes(x=data,y=prediction,group=symbol)) +
-    geom_abline(intercept=0,slope=1,colour="darkgray")+
+ggplot(tibble(t=1:4,y=1:4,cl=c(0,0.35,0.6,0.8)),aes(x=t,y=y,colour=as.factor(cl)))+
+    geom_line()+
     geom_point()+
-    facet_wrap(~symbol)
+    scale_colour_manual("VPA [mM]", values=colfunc(4))+mytheme.model.fit.paper ->
+    p1
+
+save_plot(p1,filename=paste(out.file,"_legend.pdf",sep=""))
 
 
 ######################################################################################################
